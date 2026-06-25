@@ -1,40 +1,39 @@
-/**
-* Template Name: EasyFolio
-* Template URL: https://bootstrapmade.com/easyfolio-bootstrap-portfolio-template/
-* Updated: Feb 21 2025 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
-/*--------------------------------------------------------------
-# Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
---------------------------------------------------------------*/
-/* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Questrial",  sans-serif;
-  --nav-font: "Noto Sans",  sans-serif;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Questrial", sans-serif;
+  --nav-font: "Noto Sans", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #0a0f14; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #0f2943; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #e87532; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+:root {
+  --background-color: #ffffff;
+  /* Background color for the entire website, including individual sections */
+  --default-color: #0a0f14;
+  /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #0f2943;
+  /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #e87532;
+  /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff;
+  /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff;
+  /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #0a0f14;  /* The default color of the main navmenu lheinks */
-  --nav-hover-color: #e87532; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #0a0f14; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #e87532; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #0a0f14;
+  /* The default color of the main navmenu lheinks */
+  --nav-hover-color: #e87532;
+  /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff;
+  /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff;
+  /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #0a0f14;
+  /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #e87532;
+  /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -218,15 +217,15 @@ h6 {
   }
 }
 
-.index-page .header .header-container{
-  color: #faf9fb;
+.index-page .header .header-container {
+  color: #000000;
   background-color: #1b1818;
   text-decoration-color: #faf9fb;
   border-color: #faf9fb;
 }
 
-.index-page .header .header-container .active{
-  color: #faf9fb;
+.index-page .header .header-container .active {
+  color: #000000;
   border-color: var(--surface-color);
 }
 
@@ -237,7 +236,7 @@ h6 {
 @media (min-width: 1200px) {
   .navmenu {
     padding: 0;
-    color: #e5e5e5;
+    color: #000000;
   }
 
   .navmenu ul {
@@ -246,7 +245,7 @@ h6 {
     display: flex;
     list-style: none;
     align-items: center;
-    color: #e5e5e5;
+    color: #000000;
   }
 
   .navmenu li {
@@ -254,23 +253,23 @@ h6 {
     color: #ffffff;
   }
 
-  .navmenu .active{
+  .navmenu .active {
     color: #faf9fb;
     text-decoration-color: #e5e5e5;
     text-decoration-style: rgb(255, 255, 255);
   }
 
-  .navmenu{
-    color: #e5e5e5;
+  .navmenu {
+    color: #000000;
   }
 
   .navmenu a,
   .navmenu a:focus {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     padding: 18px 15px;
     font-size: 16px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #faf9fb;
+    color: #000000;
     font-weight: 400;
     display: flex;
     align-items: center;
@@ -282,6 +281,7 @@ h6 {
   .navmenu a i,
   .navmenu a:focus i {
     font-size: 12px;
+    font: black;
     font-family: Georgia, 'Times New Roman', Times, serif;
     line-height: 0;
     margin-left: 5px;
@@ -295,7 +295,7 @@ h6 {
   .navmenu li:hover>a,
   .navmenu .active,
   .navmenu .active:focus {
-    color: rgb(243, 243, 243);
+    color: rgb(255, 255, 255);
   }
 
   .navmenu .dropdown ul {
@@ -342,9 +342,8 @@ h6 {
     visibility: visible;
   }
 
-  .navmenu .active .active
-  .mobile-nav-toggle .header-social-links{
-color: rgb(236, 236, 236);
+  .navmenu .active .active .mobile-nav-toggle .header-social-links {
+    color: rgb(236, 236, 236);
 
   }
 
@@ -466,7 +465,7 @@ color: rgb(236, 236, 236);
     overflow: hidden;
   }
 
-  .mobile-nav-active .mobile-nav-toggle {
+  .navmenu .mobile-nav-active .mobile-nav-toggle {
     color: #fff;
     position: absolute;
     font-size: 32px;
@@ -493,8 +492,8 @@ color: rgb(236, 236, 236);
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
-  color: rgb(255, 255, 255) ;
-  background-color:#202020;
+  color: rgb(255, 255, 255);
+  background-color: #202020;
   font-size: 14px;
   padding: 40px 0;
   position: relative;
@@ -526,8 +525,8 @@ color: rgb(236, 236, 236);
 }
 
 .footer .social-links a:hover {
-  color: rgb(0, 225, 255) ;
-  border-color: rgb(0, 238, 255) ;
+  color: rgb(0, 225, 255);
+  border-color: rgb(0, 238, 255);
 }
 
 .footer .credits {
@@ -734,6 +733,27 @@ section,
   }
 }
 
+.nav-buttons {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.nav-buttons {
+  background-color: #080C39;
+  border-color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+}
+
+.nav-buttons:hover {
+  background-color: rgb(0, 119, 255);
+  border-color: rgb(247, 247, 247);
+  color: var(--contrast-color);
+  transform: translateY(-2px);
+}
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -744,19 +764,27 @@ section,
   background-color: #060606;
 }
 
-.hero .container{
-  
-background-color: #060606;
 
+.hero .container {
+
+  background-color: #060606;
+margin-top: 5rem;
 }
 
-.hero .content h2 {
+.clone {
   font-size: 3.5rem;
   font-weight: 700;
+  color: #8A724E;
   font-family: Georgia, 'Times New Roman', Times, serif;
   line-height: 1.2;
-  margin-bottom: 1.5rem;
+  margin-bottom: 3.5rem;
   background-color: #060606;
+}
+
+#nav-buttons {
+  background-color: #080C39;
+  border-color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
 }
 
 @media (max-width: 991px) {
@@ -769,7 +797,7 @@ background-color: #060606;
 .hero .content .lead {
   font-size: 1.25rem;
   margin-bottom: 2rem;
-  color: #fff;
+  color: #ffffff;
   background-color: #060606;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -777,7 +805,7 @@ background-color: #060606;
 .hero .cta-buttons {
   display: flex;
   gap: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 8rem;
 }
 
 @media (max-width: 576px) {
@@ -795,21 +823,22 @@ background-color: #060606;
 }
 
 .hero .cta-buttons .btn.btn-primary {
-  background-color: rgb(1, 1, 88);
-  border-color: rgba(1, 1, 71, 0);
+  background-color: #080C39;
+  border-color: rgb(255, 255, 255);
   color: rgb(255, 255, 255);
 }
 
 .hero .cta-buttons .btn.btn-primary:hover {
   background-color: rgb(0, 119, 255);
   border-color: rgb(247, 247, 247);
+  color: var(--contrast-color);
   transform: translateY(-2px);
 }
 
 .hero .cta-buttons .btn.btn-outline {
-  border-color: rgb(0, 0, 58 var(--accent-color), transparent 15%) ;
-  color: rgb(2, 2, 88);
-  background: transparent;
+  border-color: rgb(0, 0, 58 var(--accent-color), transparent 15%);
+  color: rgb(255, 255, 255);
+  background: #080C39;
 }
 
 .hero .cta-buttons .btn.btn-outline:hover {
@@ -837,7 +866,7 @@ background-color: #060606;
   font-size: 2.5rem;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: 700;
-  color: #faf9fb;
+  color: #8A724E;
   line-height: 1;
 }
 
@@ -930,59 +959,45 @@ background-color: #060606;
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
-.skills{
+.skills {
   background-color: rgb(24, 24, 24);
-  }
+}
 
-.skills .container{
-    background-color: rgb(24, 24, 24);
-    }
+.skills .container {
+  background-color: rgb(24, 24, 24);
+}
 
-.skills .container
-.skills-animation .col-md-6
-.skill-box{
+.skills .container .skills-animation .col-md-6 .skill-box {
   background-color: rgb(0, 0, 0);
-      }
+}
 
-.skills .container
-.skills-animation .col-md-6
-.skill-box .text-light{
+.skills .container .skills-animation .col-md-6 .skill-box .text-light {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.skills .container .skills-animation .col-md-6 .skill-box .text-light .lead {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.skills .container
-.skills-animation .col-md-6
-.skill-box .text-light .lead{
+.skills .container .skills-animation .col-md-6 .skill-box .text-light .lead .text-end {
+  color: rgb(255, 255, 255);
+}
+
+.skills .container .skills-animation .col-md-6 .skill-box .text-light .lead .progress {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.skills .container
-.skills-animation .col-md-6
-.skill-box .text-light .lead .text-end{
- color: rgb(255, 255, 255);
-}   
-
-.skills .container
-.skills-animation .col-md-6
-.skill-box .text-light .lead
-.progress{
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}   
-
-.skills .container
-.skills-animation .col-md-6
-.skill-box .text-light .lead .text-end
-.progress .progress-bar{
+.skills .container .skills-animation .col-md-6 .skill-box .text-light .lead .text-end .progress .progress-bar {
   color: #1b01adbb;
-}           
+}
 
-.about{
+.about {
   background-color: #060606;
   color: rgb(255, 255, 255);
 }
 
-.about .container
-.header{
+.about .container .header {
   color: rgb(255, 255, 255);
 }
 
@@ -1016,10 +1031,11 @@ background-color: #060606;
 }
 
 .about .about-content h2 {
-  font-size: 2rem;
+  font-size: 4rem;
+  color:  #8A724E;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  color: #faf9fb;
-  font-weight: 700;
+  color:  #8A724E;
+  font-weight: 1000;
   margin-bottom: 1.5rem;
 }
 
@@ -1060,7 +1076,7 @@ background-color: #060606;
 
 .about .personal-info .info-item .value {
   font-weight: 600;
-  color: rgb(255, 255, 255);
+  color: #8A724E;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -1442,23 +1458,23 @@ background-color: #060606;
   text-decoration: none;
   list-style: none;
   word-spacing: 0%;
-  font-display:inherit;
+  font-display: inherit;
   font-size: 2rem;
   font-weight: 700;
   font: large;
 }
 
-.img-fluid{
+.img-fluid {
 
   border-radius: 20%;
 
 }
 
-.about.content h3:hover{
+.about.content h3:hover {
   color: #428bca;
 }
 
-.about.content h3:active{
+.about.content h3:active {
   color: rgb(255, 255, 255);
   font-family: Georgia, 'Times New Roman', Times, serif;
 
@@ -1506,7 +1522,7 @@ background-color: #060606;
 # About Section
 --------------------------------------------------------------*/
 .about .btn-get-started {
-  background-color:  rgb(0, 0, 0) ;
+  background-color: rgb(0, 0, 0);
   color: rgb(11, 0, 110);
   border-color: #170080;
   border-radius: 30px;
@@ -1519,12 +1535,12 @@ background-color: #060606;
 .about .btn-get-started:hover {
   border-color: rgb(255, 255, 255);
   background-color: rgb(0, 204, 255);
-  color: rgb(255, 255, 255) ;
+  color: rgb(255, 255, 255);
 }
 
 .about h1 {
   font-family: Georgia, 'Times New Roman', Times, serif;
-  color: rgb(253, 253, 253) ;
+  color: rgb(253, 253, 253);
   font-size: 30px;
 }
 
@@ -1645,8 +1661,8 @@ background-color: #060606;
 # WhyUs Section
 --------------------------------------------------------------*/
 
-.why-us{
-background-color: #131111;
+.why-us {
+  background-color: #131111;
 
 }
 
@@ -1682,10 +1698,10 @@ background-color: #131111;
   color: #e5e5e5;
   font-size: 18px;
   font-weight: 300;
-font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.why-us p{
+.why-us p {
   color: rgb(255, 255, 255);
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -1749,7 +1765,7 @@ font-family: Georgia, 'Times New Roman', Times, serif;
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
-.testimonials{
+.testimonials {
   background-color: #000000;
 }
 
@@ -1766,7 +1782,7 @@ font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .testimonials .testimonial-item {
-  background-color:rgb(20, 18, 18);
+  background-color: rgb(20, 18, 18);
   padding: 40px;
   border-radius: 20px;
 }
@@ -1876,7 +1892,7 @@ font-family: Georgia, 'Times New Roman', Times, serif;
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
-.services .btn{
+.services .btn {
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: #170080;
 }
@@ -1947,7 +1963,7 @@ font-family: Georgia, 'Times New Roman', Times, serif;
 .services .service-item p {
   font-size: 0.9rem;
   color: rgb(255, 255, 255);
-  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 @media (max-width: 991px) {
@@ -1959,21 +1975,21 @@ font-family: Georgia, 'Times New Roman', Times, serif;
 /*--------------------------------------------------------------
 # Faq Section
 --------------------------------------------------------------*/
-.faq{
-  background-color: rgb(0, 0, 0) ;
+.faq {
+  background-color: rgb(0, 0, 0);
 }
 
 .faq .faq-container .faq-item {
-  background-color: rgb(0, 0, 0) ;
+  background-color: rgb(0, 0, 0);
   color: #ffffff;
   font-family: Georgia, 'Times New Roman', Times, serif;
   position: relative;
   padding: 20px;
   margin-bottom: 15px;
-  border-top: rgb(255, 255, 255) solid 1px ;
-  border-bottom: rgb(255, 255, 255) solid 1px ;
-  border-right: rgb(255, 255, 255) solid 1px ;
-  border-left: rgb(255, 255, 255) solid 1px ;
+  border-top: rgb(255, 255, 255) solid 1px;
+  border-bottom: rgb(255, 255, 255) solid 1px;
+  border-right: rgb(255, 255, 255) solid 1px;
+  border-left: rgb(255, 255, 255) solid 1px;
   border-radius: 10%;
   overflow: hidden;
 }
@@ -2056,23 +2072,23 @@ font-family: Georgia, 'Times New Roman', Times, serif;
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
-.contact{
- background-color: #000000;
+.contact {
+  background-color: #000000;
 }
 
-.contact-form{
-background-color: #0a0f14;
+.contact-form {
+  background-color: #0a0f14;
 }
 
 
 
 .contact .section-category {
-  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: 600;
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color:#ff8800 ;
+  color: #ff8800;
 }
 
 .contact .content h2 {
@@ -2083,7 +2099,7 @@ background-color: #0a0f14;
 }
 
 .contact .content .lead {
-  color: rgb(255, 174, 0) ;
+  color: rgb(255, 174, 0);
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -2094,13 +2110,13 @@ background-color: #0a0f14;
 }
 
 .contact .contact-info .info-item i {
-  color: rgb(255, 255, 255) ;
+  color: rgb(255, 255, 255);
   font-size: 1.4rem;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .contact .contact-info .map-link {
-  color: rgb(255, 255, 255) ;
+  color: rgb(255, 255, 255);
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: 500;
   font-size: 1.1rem;
@@ -2146,7 +2162,7 @@ background-color: #0a0f14;
 }
 
 .contact .contact-form .btn-submit {
-  background-color: rgb(0, 0, 207) ;
+  background-color: rgb(0, 0, 207);
   color: var(--contrast-color);
   padding: 0.75rem 2rem;
   font-weight: 500;
@@ -2167,23 +2183,23 @@ background-color: #0a0f14;
 /*--------------------------------------------------------------
 # Portfolio Details Section
 --------------------------------------------------------------*/
-.portfolio{
-background-color: #000000;
+.portfolio {
+  background-color: #000000;
 }
 
-.portfolio .portfolio-card{
+.portfolio .portfolio-card {
   background-color: #060606;
 }
 
-.portfolio .category{
-font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-.portfolio h3{
+.portfolio .category {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.portfolio h3 :hover{
+.portfolio h3 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.portfolio h3 :hover {
   color: rgb(6, 164, 255);
 }
 
@@ -2234,7 +2250,7 @@ font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .portfolio-details .portfolio-info .btn-visit:hover {
-  background: rgb(3, 255, 221) ;
+  background: rgb(3, 255, 221);
 }
 
 .portfolio-details .portfolio-description h2 {
