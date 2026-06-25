@@ -882,6 +882,7 @@ margin-top: 5rem;
   position: relative;
   padding: 2rem;
   border-radius: 20%;
+  height: 100%;
 }
 
 .hero .hero-image img {
@@ -1540,8 +1541,12 @@ margin-top: 5rem;
 
 .about h1 {
   font-family: Georgia, 'Times New Roman', Times, serif;
-  color: rgb(253, 253, 253);
+  color: #8A724E;
   font-size: 30px;
+  font-weight: 1000;
+  font-size: 4rem;
+width: 150%;
+
 }
 
 .about p {
@@ -1572,6 +1577,13 @@ margin-top: 5rem;
   display: block;
   color: var(--default-color);
 }
+
+.img-fluid{
+
+width: 80%;
+height: auto;
+
+};
 
 /*--------------------------------------------------------------
 # Features Section
