@@ -768,7 +768,7 @@ section,
 .hero .container {
 
   background-color: #060606;
-margin-top: 5rem;
+  margin-top: 5rem;
 }
 
 .clone {
@@ -1033,9 +1033,9 @@ margin-top: 5rem;
 
 .about .about-content h2 {
   font-size: 4rem;
-  color:  #8A724E;
+  color: #8A724E;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  color:  #8A724E;
+  color: #8A724E;
   font-weight: 1000;
   margin-bottom: 1.5rem;
 }
@@ -1105,44 +1105,6 @@ margin-top: 5rem;
   margin: 0;
 }
 
-/*--------------------------------------------------------------
-# Skills Section
---------------------------------------------------------------*/
-.skills .skill-box {
-  background-color: var(--surface-color);
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-}
-
-.skills .skill-box h3 {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-
-.skills .skill-box p {
-  font-size: 0.9rem;
-  margin-bottom: 0.8rem;
-  opacity: 0.6;
-}
-
-.skills .skill-box .progress {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 85%);
-  border-radius: 50px;
-  height: 8px;
-  margin-top: 5px;
-  overflow: hidden;
-}
-
-.skills .skill-box .progress .progress-bar {
-  background-color: var(--accent-color);
-  height: 100%;
-  position: relative;
-  border-radius: 50px;
-  transition: 0.9s;
-  width: 1px;
-}
 
 /*--------------------------------------------------------------
 # Resume Section
@@ -1315,12 +1277,12 @@ margin-top: 5rem;
 }
 
 .portfolio .portfolio-filters li.filter-active {
-  background-color: var(--accent-color);
+  background-color: #080C39;
   color: var(--contrast-color);
 }
 
 .portfolio .portfolio-card {
-  background-color: var(--surface-color);
+  background-color: #8A724E;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
@@ -1376,6 +1338,13 @@ margin-top: 5rem;
   gap: 15px;
 }
 
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: var(--default-color);
+  background-color: var(--background-color);
+  line-height: 1.6;
+}
+
 .portfolio .portfolio-card .portfolio-overlay .portfolio-actions a {
   width: 45px;
   height: 45px;
@@ -1384,13 +1353,13 @@ margin-top: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--accent-color);
+  color: #080C39;
   font-size: 20px;
   transition: all 0.3s ease;
 }
 
 .portfolio .portfolio-card .portfolio-overlay .portfolio-actions a:hover {
-  background-color: var(--accent-color);
+  background-color: #080C39;
   color: var(--contrast-color);
   transform: scale(1.1);
 }
@@ -1400,8 +1369,8 @@ margin-top: 5rem;
 }
 
 .portfolio .portfolio-card .portfolio-content .category {
-  font-size: 14px;
-  color: var(--accent-color);
+  font-size: 2rem;
+  color: #8A724E;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 500;
@@ -1413,6 +1382,7 @@ margin-top: 5rem;
   font-size: 20px;
   margin: 0 0 15px;
   font-weight: 600;
+  color: #8a724e00;
   transition: color 0.3s ease;
 }
 
@@ -1545,7 +1515,7 @@ margin-top: 5rem;
   font-size: 30px;
   font-weight: 1000;
   font-size: 4rem;
-width: 150%;
+  width: 150%;
 
 }
 
@@ -1578,12 +1548,14 @@ width: 150%;
   color: var(--default-color);
 }
 
-.img-fluid{
+.img-fluid {
 
-width: 80%;
-height: auto;
+  width: 80%;
+  height: auto;
 
-};
+}
+
+;
 
 /*--------------------------------------------------------------
 # Features Section
