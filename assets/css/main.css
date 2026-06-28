@@ -22,7 +22,7 @@
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #0a0f14;
+  --nav-color: #000000;
   /* The default color of the main navmenu lheinks */
   --nav-hover-color: #e87532;
   /* Applied to main navmenu links when they are hovered over or active */
@@ -364,7 +364,7 @@ h6 {
 /* Navmenu - Mobile */
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
-    color: var(--nav-color);
+    color: black;
     font-size: 28px;
     line-height: 0;
     margin-right: 10px;
@@ -394,9 +394,9 @@ h6 {
 
   .navmenu a,
   .navmenu a:focus {
-    color: var(--nav-dropdown-color);
+    color: black;
     padding: 10px 20px;
-    font-family: var(--nav-font);
+    font-family: black;
     font-size: 17px;
     font-weight: 500;
     display: flex;
@@ -424,7 +424,7 @@ h6 {
   .navmenu a i:hover,
   .navmenu a:focus i:hover {
     background-color: var(--accent-color);
-    color: var(--contrast-color);
+    color: black  ;
   }
 
   .navmenu a:hover,
@@ -453,7 +453,7 @@ h6 {
   }
 
   .navmenu .dropdown ul ul {
-    background-color: rgba(33, 37, 41, 0.1);
+    background-color: rgba(0, 0, 0, 0.1);
   }
 
   .navmenu .dropdown>.dropdown-active {
@@ -466,7 +466,7 @@ h6 {
   }
 
   .navmenu .mobile-nav-active .mobile-nav-toggle {
-    color: #fff;
+    color: #000000;
     position: absolute;
     font-size: 32px;
     top: 15px;
@@ -517,9 +517,9 @@ h6 {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
+  border: 1px solid white;
   font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color:white;
   margin: 0 5px;
   transition: 0.3s;
 }
@@ -546,7 +546,7 @@ h6 {
   right: 15px;
   bottom: -15px;
   z-index: 99999;
-  background-color: var(--accent-color);
+  background-color:#080C39;
   width: 44px;
   height: 44px;
   border-radius: 50px;
@@ -560,7 +560,7 @@ h6 {
 }
 
 .scroll-top:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background-color: rgb(0, 247, 255);
   color: var(--contrast-color);
 }
 
@@ -633,10 +633,12 @@ h6 {
 }
 
 .page-title .title-wrapper h1 {
-  font-size: 2.5rem;
+
+  font-size: 4.5rem;
   margin-bottom: 1rem;
-  font-weight: 700;
-  color: var(--heading-color);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 1000;
+  color: #8A724E;
 }
 
 .page-title .title-wrapper p {
@@ -667,8 +669,8 @@ h6 {
 --------------------------------------------------------------*/
 section,
 .section {
-  color: var(--default-color);
-  background-color: var(--background-color);
+  color: white;
+  background-color: black;
   padding: 60px 0;
   scroll-margin-top: 90px;
   overflow: clip;
@@ -1864,8 +1866,8 @@ body {
 
 .testimonials .swiper-button-prev:hover,
 .testimonials .swiper-button-next:hover {
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
+  background-color:#080C39;
+  border-color: #080C39;
 }
 
 .testimonials .swiper-button-prev:hover::after,
@@ -2072,18 +2074,18 @@ body {
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #ff8800;
+  color: #fdfdfd;
 }
 
 .contact .content h2 {
-  color: rgb(1, 38, 94);
+  color: #8A724E;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: 700;
   line-height: 1.2;
 }
 
 .contact .content .lead {
-  color: rgb(255, 174, 0);
+  color: rgb(255, 255, 255);
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -2146,7 +2148,7 @@ body {
 }
 
 .contact .contact-form .btn-submit {
-  background-color: rgb(0, 0, 207);
+  background-color: #080C39;
   color: var(--contrast-color);
   padding: 0.75rem 2rem;
   font-weight: 500;
@@ -2227,8 +2229,11 @@ body {
 
 .portfolio-details .portfolio-info .btn-visit {
   padding: 8px 40px;
-  background: var(--accent-color);
-  color: rgb(0, 225, 255);
+  background: #080C39;
+  color: rgb(255, 255, 255);
+  padding-top: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding-bottom: 20px;
   border-radius: 50px;
   transition: 0.3s;
 }
@@ -2238,9 +2243,11 @@ body {
 }
 
 .portfolio-details .portfolio-description h2 {
-  font-size: 26px;
-  font-weight: 700;
+  font-size: 3rem;
+  font-weight: 1000;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   margin-bottom: 20px;
+  color: #8A724E;
 }
 
 .portfolio-details .portfolio-description p {

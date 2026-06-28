@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor">
+  <!-- Eyebrow -->
+  <path d="M20,25 C35,15 65,15 80,25 C65,18 35,18 20,25 Z" />
+  <!-- Eye outline -->
+  <path d="M15,45 C25,32 50,30 85,45 C75,55 50,58 15,45 Z M18,45 C50,55 72,52 81,45 C50,34 25,34 18,45 Z" />
+  <!-- Pupil / Iris -->
+  <circle cx="48" cy="44" r="11" />
+  <!-- Teardrop (right/bottom) -->
+  <path d="M45,55 C45,65 38,72 38,72 C38,72 49,68 49,55 Z" />
+  <!-- Spiral / tail (left/bottom) -->
+  <path d="M60,49 C60,65 48,78 65,78 C75,78 75,68 68,68 C64,68 64,72 66,72 C68,72 68,74 65,74 C55,74 65,62 65,51 Z" />
+</svg>

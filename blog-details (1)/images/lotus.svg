@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor">
+  <!-- Central petal -->
+  <path d="M50,15 C45,35 40,55 50,85 C60,55 55,35 50,15 Z" />
+  <!-- Left petal -->
+  <path d="M47,83 C35,65 15,50 18,38 C22,33 30,40 45,60 C48,64 48,75 47,83 Z" />
+  <!-- Right petal -->
+  <path d="M53,83 C65,65 85,50 82,38 C78,33 70,40 55,60 C52,64 52,75 53,83 Z" />
+  <!-- Left outer petal -->
+  <path d="M45,84 C25,75 5,65 5,52 C5,45 15,48 35,68 C41,74 43,80 45,84 Z" />
+  <!-- Right outer petal -->
+  <path d="M55,84 C75,75 95,65 95,52 C95,45 85,48 65,68 C59,74 57,80 55,84 Z" />
+  <!-- Stem base -->
+  <rect x="47" y="85" width="6" height="10" rx="3" />
+</svg>

@@ -28,10 +28,58 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <link href="/blog-details (1)/style.css" rel="stylesheet">
 
 </head>
 
 <body class="index-page">
+
+   <!-- Floating Background Container -->
+  <div id="bg-symbols-container" class="bg-symbols-container" aria-hidden="true"></div>
+
+  <!-- Elegant Ambient Music Player Widget -->
+  <div id="ambient-player-widget" class="ambient-player-widget">
+    <div class="player-content">
+      <button id="player-toggle-btn" class="player-toggle-btn" aria-label="Play background music">
+        <!-- Play Icon (default) -->
+        <svg class="icon-play" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <path d="M8 5v14l11-7z"/>
+        </svg>
+        <!-- Pause Icon (hidden initially) -->
+        <svg class="icon-pause" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="display: none;">
+          <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+        </svg>
+      </button>
+      
+      <div class="player-info">
+        <span class="player-title">Sands of Majesty</span>
+        <span class="player-subtitle">Epic Orchestra</span>
+      </div>
+
+      <!-- Local HTML5 Audio Source Link -->
+      <audio id="local-audio-player" loop preload="auto">
+        <source src="/tokyorifft-daughters-of-the-sphinx-438925.mp3" type="audio/mpeg">
+        <source src="/tokyorifft-daughters-of-the-sphinx-438925.mp3" type="audio/wav">
+      </audio>
+
+      <!-- Live audio visualizer bars -->
+      <div class="audio-bars" id="audio-visualizer-bars">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <!-- Volume Controller -->
+      <div class="volume-container">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" class="volume-icon">
+          <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+        </svg>
+        <input type="range" id="volume-slider" class="volume-slider" min="0" max="1" step="0.05" value="0.5" aria-label="Volume">
+      </div>
+    </div>
+  </div>
+
 
   <header id="header" class="header d-flex align-items-center sticky-top" style="background-color: rgb(0, 0, 0);">
     <div
@@ -429,9 +477,9 @@
                     <img src="assets/img/Characters/A1.jpeg" class="img-fluid" alt="" loading="lazy">
                     <div class="portfolio-overlay">
                       <div class="portfolio-actions">
-                        <a href="assets/img/Characters/A1.jpeg" class="glightbox preview-link"
+                        <a href="assets/img/Characters/F2.jpeg" class="glightbox preview-link"
                           data-gallery="portfolio-gallery-web"><i class="bi bi-eye"></i></a>
-                        <a href="portfolio-details.html" class="details-link"><i class="bi bi-arrow-right"></i></a>
+                        <a href="/blog-details (1)/index.html" class="details-link"><i class="bi bi-arrow-right"></i></a>
                       </div>
                     </div>
                   </div>
@@ -450,10 +498,10 @@
                       class="img-fluid" alt="" loading="lazy">
                     <div class="portfolio-overlay">
                       <div class="portfolio-actions">
-                        <a href="assets/img/Thrown Room/A1.jpeg"
+                        <a href="assets/img/Thrown Room/A2.png"
                           class="glightbox preview-link" data-gallery="portfolio-gallery-graphics"><i
                             class="bi bi-eye"></i></a>
-                        <a href="portfolio-details.html" class="details-link"><i class="bi bi-arrow-right"></i></a>
+                        <a href="/blog-details (1)/blog 2.html" class="details-link"><i class="bi bi-arrow-right"></i></a>
                       </div>
                     </div>
                   </div>
@@ -471,9 +519,9 @@
                     <img src="assets/img/Egytian Typography/dff6bd6751cfa27c1194a302cbf44efc.jpg" class="img-fluid" alt="" loading="lazy">
                     <div class="portfolio-overlay">
                       <div class="portfolio-actions">
-                        <a href="assets/img/Egytian Typography/1cae3a7640eaf79e5f15210e5c64a8a7.jpg" class="glightbox preview-link"
+                        <a href="assets/img/Egytian Typography/dff6bd6751cfa27c1194a302cbf44efc.jpg" class="glightbox preview-link"
                           data-gallery="portfolio-gallery-motion"><i class="bi bi-eye"></i></a>
-                        <a href="portfolio-details.html" class="details-link"><i class="bi bi-arrow-right"></i></a>
+                        <a href="/blog-details (1)/blog 3.html" class="details-link"><i class="bi bi-arrow-right"></i></a>
                       </div>
                     </div>
                   </div>
@@ -488,60 +536,17 @@
               <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-brand">
                 <div class="portfolio-card">
                   <div class="portfolio-image">
-                    <img src="assets/img/mahwa panel/img_1696.avif" class="img-fluid" alt="" loading="lazy">
+                    <img src="assets//img/Posters/F1.jpg" class="img-fluid" alt="" loading="lazy">
                     <div class="portfolio-overlay">
                       <div class="portfolio-actions">
-                        <a href="assets/img/mahwa panel/img_1696.avif" class="glightbox preview-link"
+                        <a href="/assets/img/Posters/F1.jpg" class="glightbox preview-link"
                           data-gallery="portfolio-gallery-brand"><i class="bi bi-eye"></i></a>
-                        <a href="portfolio-details.html" class="details-link"><i class="bi bi-arrow-right"></i></a>
+                        <a href="/blog-details (1)/Blog 4.html" class="details-link"><i class="bi bi-arrow-right"></i></a>
                       </div>
                     </div>
                   </div>
                   <div class="portfolio-content">
                     <span class="category">Posters</span>
-                    <h3>P.3</h3>
-                    <p></p>
-                  </div>
-                </div>
-              </div><!-- End Portfolio Item -->
-
-              <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-web">
-                <div class="portfolio-card">
-                  <div class="portfolio-image">
-                    <img
-                      src="assets/img/Religion/ad0baae74834b7decb815411cd96e75c.jpg"
-                      class="img-fluid" alt="" loading="lazy">
-                    <div class="portfolio-overlay">
-                      <div class="portfolio-actions">
-                        <a href="assets/img/Religion/ad0baae74834b7decb815411cd96e75c.jpg"
-                          class="glightbox preview-link" data-gallery="portfolio-gallery-web"><i
-                            class="bi bi-eye"></i></a>
-                        <a href="portfolio-details.html" class="details-link"><i class="bi bi-arrow-right"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="portfolio-content">
-                    <span class="category">Religion</span>
-                    <h3>P.2</h3>
-                    <p></p>
-                  </div>
-                </div>
-              </div><!-- End Portfolio Item -->
-
-              <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-graphics">
-                <div class="portfolio-card">
-                  <div class="portfolio-image">
-                    <img src="assets/img/mahwa panel/solo-leveling-beru.avif" class="img-fluid" alt="" loading="lazy">
-                    <div class="portfolio-overlay">
-                      <div class="portfolio-actions">
-                        <a href="assets/img/mahwa panel/solo-leveling-beru.avif" class="glightbox preview-link"
-                          data-gallery="portfolio-gallery-graphics"><i class="bi bi-eye"></i></a>
-                        <a href="portfolio-details.html" class="details-link"><i class="bi bi-arrow-right"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="portfolio-content">
-                    <span class="category">Life Style</span>
                     <h3>P.3</h3>
                     <p></p>
                   </div>
@@ -595,24 +600,26 @@
                 <div class="testimonial-item">
                   <div class="row">
                     <div class="col-lg-8">
-                      <h2>Kaito</h2>
+                      <h2>Amanda Morobi</h2>
+                      span>History Enthusiast</span>
                       <p>
-                        Alright team, Solo Leveling.The anime adaptation. Let's hear it!
+                       "I expected to learn about Ancient Egyptian architecture, but I didn't expect to spend half my evening wondering how people moved giant stones without modern machinery.
+                        The level of planning, creativity, and engineering was honestly mind-blowing
                       </p>
                       <p>
 
                       </p>
                       <div class="profile d-flex align-items-center">
-                        <img src="assets/img/testimonial/T.6.jpg" class="profile-img" alt="">
+                        <img src="assets/img/testimonial/D1.jpg" class="profile-img" alt="">
                         <div class="profile-info">
-                          <h3>Kaito</h3>
+                          <h3>Amanda Morobi</h3>
                           <span>Reviewer</span>
                         </div>
                       </div>
                     </div>
                     <div class="col-lg-4 d-none d-lg-block">
                       <div class="featured-img-wrapper">
-                        <img src="assets/img/testimonial/T.6.jpg" class="featured-img" alt="">
+                        <img src="assets/img/testimonial/D1.jpg" class="featured-img" alt="">
                       </div>
                     </div>
                   </div>
@@ -623,25 +630,26 @@
                 <div class="testimonial-item">
                   <div class="row">
                     <div class="col-lg-8">
-                      <h2>Sakura</h2>
+                      <h2>Kwame Mensah</h2>
+                      <span>Design Student</span>
                       <p>
-                        Sighs dramatically Honestly, the CGI on the ant-soldiers?Cheap.I've seen better animation in a
-                        toaster oven commercial.
+                        "The pyramids get all the attention, and fair enough, they are incredible. But the temples, columns, and detailed carvings were what really caught my interest
                       </p>
                       <p>
 
                       </p>
                       <div class="profile d-flex align-items-center">
-                        <img src="assets/img/testimonial/T.5.jpg" class="profile-img" alt="">
+                        <img src="assets/img/testimonial/D4.jpg" class="profile-img" alt="">
                         <div class="profile-info">
-                          <h3>Sakura</h3>
+                          <h3>Kwame Mensah</h3>
                           <span>Reviewer</span>
+                          
                         </div>
                       </div>
                     </div>
                     <div class="col-lg-4 d-none d-lg-block">
                       <div class="featured-img-wrapper">
-                        <img src="assets/img/testimonial/T.5.jpg" class="featured-img" alt="">
+                        <img src="assets/img/testimonial/D4.jpg" class="featured-img" alt="">
                       </div>
                     </div>
                   </div>
@@ -653,25 +661,25 @@
                   <div class="row">
                     <div class="col-lg-8">
                       <h2>
-                        Kenji
+                       Rose Nkoane
                       </h2>
+                      <span>History Enthusiast</span>
                       <p>
-                        But the fight scenes! The sheer *power* of Sung Jin-Woo!I practically wept manly tears of joy.
-                      </p>
-                      <p>
+                        "Honestly, they were creating immersive environments long before websites and virtual reality existed."
+                
 
                       </p>
                       <div class="profile d-flex align-items-center">
-                        <img src="assets/img/testimonial/T.3.jpg" class="profile-img" alt="">
+                        <img src="assets/img/testimonial/D3.jpg" class="profile-img" alt="">
                         <div class="profile-info">
-                          <h3>Kenji</h3>
+                          <h3>Rose Nkoane</h3>
                           <span>Reviewer</span>
                         </div>
                       </div>
                     </div>
                     <div class="col-lg-4 d-none d-lg-block">
                       <div class="featured-img-wrapper">
-                        <img src="assets/img/testimonial/T.3.jpg" class="featured-img" alt="">
+                        <img src="assets/img/testimonial/D3.jpg" class="featured-img" alt="">
                       </div>
                     </div>
                   </div>
@@ -682,25 +690,24 @@
                 <div class="testimonial-item">
                   <div class="row">
                     <div class="col-lg-8">
-                      <h2>Aiko</h2>
-                      <p>
-                        Exactly!That's why we're all here.To collectively mourn Thomas and celebrate the awesomeness and
-                        occasional cheapness of Solo Leveling!
-                      </p>
-                      <p>
+                      <h2>Thandiwe Dlamini</h2>
+                      <span>Visual Designer</span>
 
-                      </p>
+                     <p>"What I enjoyed most was discovering how architecture and storytelling worked together in Ancient Egypt.</p>
+                          <p>Every wall, statue, and structure seemed to communicate something important about society, religion, or leadership.
+                             As a designer, I found that incredibly inspiring</p>
+
                       <div class="profile d-flex align-items-center">
-                        <img src="assets/img/testimonial/T.4.jpg" class="profile-img" alt="">
+                        <img src="assets/img/testimonial/D5.jpg" class="profile-img" alt="">
                         <div class="profile-info">
-                          <h3>Aiko</h3>
+                          <h3>Thandiwe Dlamini</h3>
                           <span>Reviewer</span>
                         </div>
                       </div>
                     </div>
                     <div class="col-lg-4 d-none d-lg-block">
                       <div class="featured-img-wrapper">
-                        <img src="assets/img/testimonial/T.4.jpg" class="featured-img" alt="">
+                        <img src="assets/img/testimonial/D5.jpg" class="featured-img" alt="">
                       </div>
                     </div>
                   </div>
@@ -725,69 +732,6 @@
       <!-- Services Section -->
       <section id="services" class="services section">
 
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2> Adaptation Advice</h2>
-          <div class="title-shape">
-            <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
-              <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor"
-                stroke-width="2"></path>
-            </svg>
-          </div>
-          <p></p>
-        </div><!-- End Section Title -->
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="row align-items-center">
-            <div class="col-lg-4 mb-5 mb-lg-0">
-              <h2 class="fw-bold mb-4 servies-title">Solo Leveling Tips and Notes</h2>
-              <p class="mb-4">.</p>
-              <a href="#" class="btn btn-outline-primary">See all services</a>
-            </div>
-            <div class="col-lg-8">
-              <div class="row g-4">
-
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-                  <div class="service-item">
-                    <i class="bi bi-activity icon"></i>
-                    <h3><a href="service-details.html">Collaboration</a></h3>
-                    <p>working with illustrators, writers, translators, animators, or a combination.</p>
-                  </div>
-                </div><!-- End Service Item -->
-
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-                  <div class="service-item">
-                    <i class="bi bi-easel icon"></i>
-                    <h3><a href="service-details.html">Freelance Platforms</a></h3>
-                    <p>primarily revolving around flexibility, access to a wider pool of talent, and convenience.</p>
-                  </div>
-                </div><!-- End Service Item -->
-
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
-                  <div class="service-item">
-                    <i class="bi bi-broadcast icon"></i>
-                    <h3><a href="service-details.html">Mahwa Studio</a></h3>
-                    <p>Being surrounded by like-minded individuals who share your passion is invigorating. Our hub of
-                      creativity.</p>
-                  </div>
-                </div><!-- End Service Item -->
-
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
-                  <div class="service-item">
-                    <i class="bi bi-bounding-box-circles icon"></i>
-                    <h3><a href="service-details.html">Specilized individuals</a></h3>
-                    <p> Our diverse talents allow us to provide insightful reviews that delve into the art,
-                      storytelling,
-                      and animation techniques employed in each panel and episode.</p>
-                  </div>
-                </div><!-- End Service Item -->
-
-              </div>
-            </div>
-          </div>
-
-        </div>
 
       </section><!-- /Services Section -->
 
@@ -796,7 +740,7 @@
 
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-          <h2>Frequently Asked Questions</h2>
+          <h2>Contact</h2>
           <div class="title-shape">
             <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
               <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor"
@@ -815,8 +759,7 @@
             <div class="row g-5">
               <div class="col-lg-6">
                 <div class="content" data-aos="fade-up" data-aos-delay="200">
-                  <div class="section-category mb-3">Contact</div>
-                  <h2 class="display-5 mb-4">Solo Leveling</h2>
+                  <h2 class="display-5 mb-4">Ancient Egyptian Art</h2>
                   <p class="lead mb-4">Contact and Reach us .</p>
 
                   <div class="contact-info mt-5">
@@ -836,7 +779,7 @@
                     </div>
 
                     <a href="#" class="map-link d-inline-flex align-items-center">
-                      Open Map
+                     Back to top Page
                       <i class="bi bi-arrow-right ms-2"></i>
                     </a>
                   </div>
@@ -896,7 +839,7 @@
       <div class="copyright text-center ">
         <p>©<span>Copyright</span> <strong class="px-1 sitename"></strong> <span>All Rights Reserved</span></p>
       </div>
-      <div class="social-links d-flex justify-content-center">
+      <div class="social-links d-flex justify-content-center text-light">
         <a href=""><i class="bi bi-twitter-x"></i></a>
         <a href=""><i class="bi bi-facebook"></i></a>
         <a href=""><i class="bi bi-instagram"></i></a>
@@ -926,6 +869,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="/blog-details (1)/script.js"></script>
 
 </body>
 

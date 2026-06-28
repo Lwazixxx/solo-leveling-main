@@ -1,0 +1,666 @@
+/* ==========================================================================
+   Egyptian-Themed Blog Details Stylesheet
+   ========================================================================== */
+
+/* 1. CSS Variables & Theme Definitions */
+:root {
+  /* Colors */
+  --color-bg-primary: #080a0d;       /* Midnight onyx */
+  --color-bg-secondary: #11141a;     /* Deep slate */
+  --color-bg-header: #1a1e26;        /* Slate gray for header background */
+  --color-text-primary: #f3f4f6;     /* Off-white */
+  --color-text-secondary: #a0aec0;   /* Muted sand gray */
+  --color-accent-gold:#8A724E;      /* Warm Egyptian gold */
+  --color-accent-gold-hover: #080C39;/* Light golden wheat */
+  --color-button-bg: #0c1c3a;        /* Deep sapphire blue */
+  --color-button-hover: #132b58;     /* Lighter sapphire */
+  --color-button-border: #1d3557;    /* Subtle blue-gray outline */
+  --color-button-text: #ffffff;      /* Pure white for button text */
+  --color-footer-bg: #0b0d10;        /* Deep dark charcoal for footer */
+  --color-social-hover: #080C39;     /* Gold hover for social icons */
+  --color-designer-name: #e53e3e;    /* Rich terracotta red for Lwazi Mokone */
+
+  /* Fonts */
+  --font-family-display: 'Cinzel', Georgia, serif;
+  --font-family-body: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Sizing and Layout */
+  --container-max-width: 1280px;
+  --border-radius-large: 45px;       /* Extremely smooth organic corners for images */
+  --border-radius-pill: 50px;        /* Button pill shape */
+  
+  /* Animations */
+  --transition-default: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --transition-slow: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* 2. Global Resets and Base Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-family-body);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  line-height: 1.65;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Utility Containers */
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* 3. Subtle Animated Floating Background Symbols */
+.bg-symbols-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.floating-symbol {
+  position: absolute;
+  bottom: -150px;
+  opacity: 0;
+  color: var(--color-accent-gold);
+  filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.4)) drop-shadow(0 0 2px rgba(212, 175, 55, 0.2));
+  animation: floatUp 10s linear infinite;
+  pointer-events: none;
+}
+
+.bg-symbols-container {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.bg-symbol {
+    position: absolute;
+    width: 40px;
+    opacity: 0.2;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(0.8);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.15; /* Increased from 0.04 to make it more visible and clear */
+  }
+  90% {
+    opacity: 0.15; /* Increased from 0.04 to make it more visible and clear */
+  }
+  100% {
+    transform: translateY(-120vh) rotate(360deg) scale(1.1);
+    opacity: 0;
+  }
+}
+
+/* 4. Header Section */
+.blog-header {
+  background-color: var(--color-bg-header);
+  padding: 3rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.header-title {
+  font-family: var(--font-family-display);
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: var(--color-accent-gold);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+  display: inline-block;
+}
+
+.header-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  background-color: var(--color-accent-gold);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+/* 5. Main Content Section & Layout */
+.main-content {
+  flex: 1;
+  padding: 5rem 0;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2); /* Contrast overlay */
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* 6. Left Column: Stacked Images with Zoom & Lift */
+.blog-media {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.image-wrapper {
+  overflow: hidden;
+  border-radius: var(--border-radius-large);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  background-color: #0d1013;
+  aspect-ratio: 16/10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-slow);
+}
+
+.blog-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: var(--transition-slow);
+  opacity: 0; /* Starts hidden for fade-in lazy load */
+}
+
+/* Zoom & Lift Hover Effects */
+.image-wrapper:hover {
+  transform: translateY(-8px);
+  border-color: rgba(212, 175, 55, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7), 0 0 15px rgba(212, 175, 55, 0.15);
+}
+
+.image-wrapper:hover .blog-image {
+  transform: scale(1.05);
+}
+
+/* Image Fade-In on Load */
+.blog-image.loaded {
+  opacity: 1;
+}
+
+/* 7. Right Column: Blog Text & Typography */
+.blog-article {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.blog-title {
+  font-family: var(--font-family-display);
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--color-accent-gold);
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+.blog-paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.blog-paragraphs p {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  font-weight: 300;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* 8. Call to Action Button */
+.button-container {
+  margin-top: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-family: var(--font-family-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding: 0.9rem 2.5rem;
+  border-radius: var(--border-radius-pill);
+  transition: var(--transition-default);
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--color-button-bg);
+  color: var(--color-button-text);
+  border: 1px solid var(--color-button-border);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Button Hover: slight color change and lift */
+.btn-primary:hover {
+  background-color: var(--color-button-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(12, 28, 58, 0.5), 0 0 10px rgba(212, 175, 55, 0.1);
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+.btn-primary:active {
+  transform: translateY(-1px);
+}
+
+/* 9. Footer Section */
+.blog-footer {
+  background-color: var(--color-footer-bg);
+  padding: 4rem 1rem 3rem;
+  border-top: 1px solid rgba(212, 175, 55, 0.08);
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.5px;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px; /* Touch target minimum 44px */
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--color-text-primary);
+  background-color: rgba(255, 255, 255, 0.03);
+  transition: var(--transition-default);
+}
+
+.social-svg {
+  transition: var(--transition-default);
+}
+
+/* Social Hover */
+.social-link:hover {
+  color: var(--color-bg-primary);
+  background-color: var(--color-accent-gold);
+  border-color: var(--color-accent-gold);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+.social-link:hover .social-svg {
+  transform: scale(1.05);
+}
+
+/* Designer Credit styling to match the screenshot bottom text */
+.designer-credit {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.5px;
+  margin-top: 0.5rem;
+}
+
+.designer-name {
+  color: var(--color-designer-name);
+  font-weight: 500;
+}
+
+/* 10. Responsive Media Queries (Mobile First) */
+@media (min-width: 1024px) {
+  .blog-grid {
+    grid-template-columns: 1fr 1.1fr; /* Two columns on desktop */
+    gap: 5rem;
+  }
+
+  .header-title {
+    font-size: 3.5rem;
+  }
+
+  .blog-title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 3rem 0;
+  }
+  
+  .blog-grid {
+    gap: 3rem;
+  }
+
+  .header-title {
+    font-size: 2.25rem;
+  }
+
+  .image-wrapper {
+    border-radius: 30px; /* Symmetrical reduction for mobile devices */
+  }
+
+  .blog-title {
+    font-size: 2rem;
+  }
+
+  .blog-paragraphs p {
+    text-align: left; /* Better reading experience on small screens */
+  }
+}
+
+/* 11. Page Load Entrance Animations */
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes imageEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(35px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Base page fade-in */
+body {
+  animation: pageFadeIn 0.8s ease-out both;
+}
+
+/* Staggered Content Entrances */
+.header-title {
+  animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.1s;
+}
+
+.image-wrapper:nth-of-type(1) {
+  animation: imageEntrance 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.3s;
+}
+
+.image-wrapper:nth-of-type(2) {
+  animation: imageEntrance 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.5s;
+}
+
+.blog-title {
+  animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.7s;
+}
+
+.blog-paragraphs p:nth-child(1) {
+  animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.8s;
+}
+
+.blog-paragraphs p:nth-child(2) {
+  animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.85s;
+}
+
+.blog-paragraphs p:nth-child(3) {
+  animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.9s;
+}
+
+.blog-paragraphs p:nth-child(4) {
+  animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.95s;
+}
+
+.blog-paragraphs p:nth-child(5) {
+  animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 1.0s;
+}
+
+.button-container {
+  animation: fadeInUp 1.1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 1.1s;
+}
+
+.blog-footer {
+  animation: pageFadeIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 1.2s;
+}
+
+/* 12. Elegant Ambient Music Player Widget */
+.ambient-player-widget {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 1000;
+  background-color: rgba(17, 20, 26, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 20px;
+  padding: 0.75rem 1.25rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transition: var(--transition-default);
+  animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.4s;
+}
+
+.ambient-player-widget:hover {
+  border-color: var(--color-accent-gold);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6), 0 0 15px rgba(212, 175, 55, 0.15);
+}
+
+.player-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.player-toggle-btn {
+  background: var(--color-button-bg);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  color: var(--color-accent-gold);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-default);
+  outline: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.player-toggle-btn:hover {
+  background: var(--color-accent-gold);
+  color: var(--color-bg-primary);
+  transform: scale(1.08) translateY(-2px);
+  box-shadow: 0 6px 15px rgba(212, 175, 55, 0.3);
+}
+
+.player-toggle-btn:active {
+  transform: scale(0.98);
+}
+
+.player-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.player-title {
+  font-family: var(--font-family-display);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-accent-gold);
+  letter-spacing: 0.5px;
+}
+
+.player-subtitle {
+  font-size: 0.7rem;
+  color: var(--color-text-secondary);
+  font-weight: 400;
+}
+
+/* Music spectrum bars animation */
+.audio-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 18px;
+  width: 20px;
+}
+
+.audio-bars .bar {
+  width: 3px;
+  height: 2px;
+  background-color: var(--color-accent-gold);
+  border-radius: 1px;
+  transition: height 0.2s ease;
+}
+
+/* Active animated visualizer class */
+.audio-bars.playing .bar {
+  animation: bounceBars 1s ease-in-out infinite alternate;
+}
+
+.audio-bars.playing .bar:nth-child(1) { animation-delay: 0.1s; animation-duration: 0.8s; }
+.audio-bars.playing .bar:nth-child(2) { animation-delay: 0.3s; animation-duration: 1.1s; }
+.audio-bars.playing .bar:nth-child(3) { animation-delay: 0.0s; animation-duration: 0.9s; }
+.audio-bars.playing .bar:nth-child(4) { animation-delay: 0.4s; animation-duration: 1.2s; }
+
+@keyframes bounceBars {
+  0% { height: 2px; }
+  100% { height: 18px; }
+}
+
+/* Volume Slider */
+.volume-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  padding-left: 0.75rem;
+}
+
+.volume-icon {
+  color: var(--color-text-secondary);
+  transition: var(--transition-default);
+}
+
+.ambient-player-widget:hover .volume-icon {
+  color: var(--color-accent-gold);
+}
+
+.volume-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 60px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+  outline: none;
+  transition: var(--transition-default);
+}
+
+.volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-accent-gold);
+  cursor: pointer;
+  transition: var(--transition-default);
+}
+
+.volume-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.3);
+}
+
+.volume-slider::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-accent-gold);
+  cursor: pointer;
+  border: none;
+  transition: var(--transition-default);
+}
+
+.volume-slider::-moz-range-thumb:hover {
+  transform: scale(1.3);
+}
+
+/* Responsive adjustment for Mobile screens */
+@media (max-width: 768px) {
+  .ambient-player-widget {
+    top: auto;
+    bottom: 1.5rem;
+    right: 50%;
+    transform: translateX(50%);
+    animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+}
+
+
